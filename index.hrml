@@ -17,7 +17,7 @@
 
 <body>
 
-<model-viewer
+<model-viewer>
   src="NG-11N_(90)_110_H.glb"
   camera-controls
   auto-rotate
