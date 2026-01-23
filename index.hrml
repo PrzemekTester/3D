@@ -20,3 +20,16 @@
     }
   </style>
 </head>
+
+<body>
+
+<model-viewer
+  src="NG-11N_(90)_110_H.glb"
+  camera-controls
+  auto-rotate
+  shadow-intensity="1"
+  exposure="1.1">
+</model-viewer>
+
+</body>
+</html>
