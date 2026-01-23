@@ -6,6 +6,7 @@
         View in your space
     </button>
     <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        <img src="https://przemektester.github.io/3D/NG-11N_(90)_110_H.glb
+">
     </div>
 </model-viewer>
