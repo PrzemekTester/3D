@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Model 3D NG-11N</title>
 
-  <!-- Model Viewer -->
+  <Model Viewer>
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
@@ -17,7 +17,7 @@
 
 <body>
 
-<model-viewer>
+<model-viewer
   src="NG-11N_(90)_110_H.glb"
   camera-controls
   auto-rotate
