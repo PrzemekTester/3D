@@ -1,1 +1,4 @@
-# 3D
+/3d
+ ├── index.html
+ ├── model.glb
+ └── preview.jpg (opcjonalnie)
