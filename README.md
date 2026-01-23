@@ -1,4 +1,3 @@
-/3d
+3D (repozytorium / folder root)
  ├── index.html
- ├── model.glb
- └── preview.jpg
+ └── NG-11N_(90)_110_H.glb
