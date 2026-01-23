@@ -1,12 +1,28 @@
-<model-viewer src="NG-11N_(90)_110_H.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
-    <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-    </div>
-    <button slot="ar-button" id="ar-button">
-        View in your space
-    </button>
-    <div id="ar-prompt">
-        <img src="https://przemektester.github.io/3D/NG-11N_(90)_110_H.glb
-">
-    </div>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Model 3D NG-11N</title>
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <style>
+    body { margin:0; }
+    model-viewer { width:100%; height:100vh; }
+  </style>
+</head>
+
+<body>
+
+<model-viewer
+  src="NG-11N_(90)_110_H.glb"
+  camera-controls
+  auto-rotate
+  shadow-intensity="1"
+  exposure="1.1">
 </model-viewer>
+
+</body>
+</html>
