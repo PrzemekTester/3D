@@ -56,33 +56,12 @@
       50%  { transform: scale(1.07); opacity: 1; }
       100% { transform: scale(1);   opacity: 0.85; }
     }
-
-    /* ===== PRZYCISK FULLSCREEN ===== */
-    .fullscreen-btn {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      width: 34px;
-      height: 34px;
-      border-radius: 6px;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      border: none;
-      font-size: 18px;
-      cursor: pointer;
-      z-index: 101;
-    }
-
-    .fullscreen-btn:hover {
-      background: rgba(0,0,0,0.85);
-    }
   </style>
 </head>
 
 <body>
 
 <model-viewer
-  id="viewer"
   src="NG-11N_(90)_110_H.glb"
   alt="Model 3D"
   camera-controls
@@ -91,28 +70,8 @@
   exposure="1.1">
 </model-viewer>
 
-<!-- PRZYCISK FULLSCREEN -->
-<button class="fullscreen-btn" id="fsBtn">⛶</button>
-
 <!-- IKONA 3D -->
 <div class="badge-3d"></div>
-
-<script>
-  const viewer = document.getElementById("viewer");
-  const btn = document.getElementById("fsBtn");
-
-  btn.addEventListener("click", () => {
-    if (!document.fullscreenElement) {
-      viewer.requestFullscreen();
-    } else {
-      document.exitFullscreen();
-    }
-  });
-
-  document.addEventListener("fullscreenchange", () => {
-    btn.textContent = document.fullscreenElement ? "✕" : "⛶";
-  });
-</script>
 
 </body>
 </html>
