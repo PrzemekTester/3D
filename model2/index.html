@@ -3,56 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <title>NG-06N</title>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
   <style>
-    body { 
-      margin: 0; 
-      height: 100vh; 
-      /* gradient tła całego ekranu */
-      background: #000000; 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
       overflow: hidden;
     }
-    model-viewer { 
-      width: 100%; 
-      height: 100%; 
-      background-color: #000000; /* pozwala widzieć gradient z body */
+
+    /* Kontener główny */
+    .viewer-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #000;
     }
 
-    /* Znaczek 3D w dolnym prawym rogu */
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: block;
+    }
+
+    /* LOGO 3D – większe, ale nie zasłania modelu */
     .badge-3d {
       position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background-color: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      font-size: 14px;
+      bottom: 14px;
+      right: 14px;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
       font-weight: bold;
-      padding: 4px 8px;
-      border-radius: 6px;
-      pointer-events: none; /* nie przeszkadza w interakcji z modelem */
-      font-family: sans-serif;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 6px 14px;
+      border-radius: 10px;
+      letter-spacing: 1px;
+      pointer-events: none;
+      user-select: none;
     }
   </style>
 </head>
-<body>
-  <model-viewer
-    src="NG-06N_240_90.glb"
-    alt="Model NG-06N"
-    camera-controls
-    auto-rotate
-    shadow-intensity="1">
-  </model-viewer>
 
-  <!-- Mały znaczek 3D -->
-  <div class="badge-3d">3D</div>
-</body>
-</html>
-    auto-rotate
-    shadow-intensity="1">
-  </model-viewer>
+<body>
+  <div class="viewer-wrapper">
+    <model-viewer
+      src="NG-06N_240_90.glb"
+      alt="Model NG-06N"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1">
+    </model-viewer>
+
+    <div class="badge-3d">3D</div>
+  </div>
 </body>
 </html>
