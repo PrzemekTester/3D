@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Model 3D</title>
+  <title>Model 3D - Miniatura</title>
 
   <!-- Model Viewer -->
   <script type="module"
@@ -12,18 +12,88 @@
   <style>
     body {
       margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    /* Miniatura */
+    #miniWrapper {
+      width: 400px;
+      height: 300px;
+      border: 1px solid #555;
+      cursor: pointer;
       position: relative;
       overflow: hidden;
-      font-family: Arial, sans-serif;
-      background: #000;
+      border-radius: 6px;
     }
 
-    model-viewer {
+    #miniWrapper model-viewer {
       width: 100%;
-      height: 100vh;
+      height: 100%;
     }
 
-    /* ===== IKONA 3D ===== */
+    /* Przyciski */
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #0078d7;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005a9e;
+    }
+
+    /* Modal */
+    #modal {
+      display: none;
+      position: fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: column;
+    }
+
+    #modal model-viewer {
+      width: 80%;
+      height: 80%;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+
+    #closeBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff3b3b;
+      color: white;
+      cursor: pointer;
+    }
+
+    #closeBtn:hover {
+      background-color: #c12727;
+    }
+
+    /* Badge 3D w modalu */
     .badge-3d {
       position: absolute;
       bottom: 14px;
@@ -56,22 +126,51 @@
       50%  { transform: scale(1.07); opacity: 1; }
       100% { transform: scale(1);   opacity: 0.85; }
     }
+
   </style>
 </head>
 
 <body>
 
-<model-viewer
-  src="NG-11N_(90)_110_H.glb"
-  alt="Model 3D"
-  camera-controls
-  auto-rotate
-  shadow-intensity="1"
-  exposure="1.1">
-</model-viewer>
+<h2>Podgląd modelu 3D</h2>
 
-<!-- IKONA 3D -->
-<div class="badge-3d"></div>
+<!-- Miniatura -->
+<div id="miniWrapper">
+  <model-viewer
+    src="NG-11N_(90)_110_H.glb"
+    alt="Model 3D"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    exposure="1.1">
+  </model-viewer>
+</div>
+
+<button onclick="openModal()">Powiększ</button>
+
+<!-- Modal -->
+<div id="modal">
+  <model-viewer
+    src="NG-11N_(90)_110_H.glb"
+    alt="Model 3D"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    exposure="1.1">
+  </model-viewer>
+  <div class="badge-3d"></div>
+  <button id="closeBtn" onclick="closeModal()">Zamknij</button>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('modal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+</script>
 
 </body>
 </html>
