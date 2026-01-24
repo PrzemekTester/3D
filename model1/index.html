@@ -3,57 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <title>NG-11N</title>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
   <style>
-    body { 
-      margin: 0; 
-      height: 100vh; 
-      background: linear-gradient(135deg, #87ceeb, #ffffff); 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
       overflow: hidden;
     }
 
-    model-viewer { 
-      width: 100%; 
-      height: 100%; 
-      background-color: transparent;
+    /* Główny kontener */
+    .viewer-wrapper {
       position: relative;
+      width: 100%;
+      height: 100%;
+      background: #000;
     }
 
+    /* GŁÓWNY MODEL */
+    .main-model {
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: block;
+    }
+
+    /* LOGO 3D */
     .logo-3d-container {
       position: absolute;
-      bottom: 25px;
-      right: 25px;
-      width: 140px;          /* rozmiar pudełka na logo 3D */
-      height: 140px;
-      z-index: 10;
-      pointer-events: none;  /* nie blokuje sterowania głównym modelem */
-      opacity: 0.92;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+      bottom: 16px;
+      right: 16px;
+      width: 160px;   /* POWIĘKSZONE */
+      height: 160px;
+      pointer-events: none;
+      opacity: 0.95;
+      filter: drop-shadow(0 6px 14px rgba(0,0,0,0.6));
     }
 
     .logo-3d-container model-viewer {
       width: 100%;
       height: 100%;
+      background-color: transparent;
       --poster-color: transparent;
-      --background-color: transparent;
     }
   </style>
 </head>
-<body>
 
-  <model-viewer
-    src="NG-11N_(90)_110_H.glb"
-    alt="Model NG-11N 90×110"
-    camera-controls
-    auto-rotate
-    shadow-intensity="1"
-    exposure="0.9"
-    environment-image="neutral"
-  >
-    <!-- Małe 3D logo w prawym dolnym rogu -->
+<body>
+  <div class="viewer-wrapper">
+
+    <!-- GŁÓWNY MODEL -->
+    <model-viewer
+      class="main-model"
+      src="NG-11N_(90)_110_H.glb"
+      alt="Model NG-11N 90×110"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      exposure="0.9"
+      environment-image="neutral">
+    </model-viewer>
+
+    <!-- LOGO 3D -->
     <div class="logo-3d-container">
       <model-viewer
         src="gltf-logo.glb"
@@ -67,11 +83,10 @@
         environment-image="neutral"
         disable-zoom
         disable-pan
-        disable-tap
-      >
+        disable-tap>
       </model-viewer>
     </div>
-  </model-viewer>
 
+  </div>
 </body>
 </html>
