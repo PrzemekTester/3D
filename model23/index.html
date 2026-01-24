@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>NG-06N_Gotisk</title>
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+
+    /* Kontener główny */
+    .viewer-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: block;
+    }
+
+    /* LOGO 3D – większe, ale nie zasłania modelu */
+    .badge-3d {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 6px 14px;
+      border-radius: 10px;
+      letter-spacing: 1px;
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="viewer-wrapper">
+    <model-viewer
+      src="NG-06N_240_90_Gotisk.glb"
+      alt="Model NG-06N_Gotisk"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1">
+    </model-viewer>
+
+    <div class="badge-3d">3D</div>
+  </div>
+</body>
+</html>
