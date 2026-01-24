@@ -17,7 +17,6 @@
       overflow: hidden;
     }
 
-    /* Kontener główny */
     .viewer-wrapper {
       position: relative;
       width: 100%;
@@ -25,18 +24,23 @@
       background: #000;
     }
 
+    /* GŁÓWNY MODEL */
     model-viewer {
+      position: absolute;   /* ⬅️ KLUCZ */
+      inset: 0;
       width: 100%;
       height: 100%;
       background-color: #000;
+      z-index: 1;           /* ⬅️ POD LOGO */
       display: block;
     }
 
-    /* LOGO 3D – większe, ale nie zasłania modelu */
+    /* LOGO 3D */
     .badge-3d {
       position: absolute;
       bottom: 14px;
       right: 14px;
+      z-index: 10;          /* ⬅️ NAD MODELEM */
       font-family: Arial, sans-serif;
       font-size: 18px;
       font-weight: bold;
@@ -53,6 +57,7 @@
 
 <body>
   <div class="viewer-wrapper">
+
     <model-viewer
       src="NG-11N_(90)_110_H.glb"
       alt="Model NG-11N"
@@ -62,6 +67,7 @@
     </model-viewer>
 
     <div class="badge-3d">3D</div>
+
   </div>
 </body>
 </html>
