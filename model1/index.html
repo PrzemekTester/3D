@@ -8,26 +8,70 @@
     body { 
       margin: 0; 
       height: 100vh; 
-      /* gradient tła całego ekranu */
       background: linear-gradient(135deg, #87ceeb, #ffffff); 
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
+
     model-viewer { 
       width: 100%; 
       height: 100%; 
-      background-color: #000000; /* pozwala widzieć gradient z body */
+      background-color: transparent;
+      position: relative;
+    }
+
+    .logo-3d-container {
+      position: absolute;
+      bottom: 25px;
+      right: 25px;
+      width: 140px;          /* rozmiar pudełka na logo 3D */
+      height: 140px;
+      z-index: 10;
+      pointer-events: none;  /* nie blokuje sterowania głównym modelem */
+      opacity: 0.92;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+    }
+
+    .logo-3d-container model-viewer {
+      width: 100%;
+      height: 100%;
+      --poster-color: transparent;
+      --background-color: transparent;
     }
   </style>
 </head>
 <body>
+
   <model-viewer
     src="NG-11N_(90)_110_H.glb"
-    alt="Model NG-NG11 90x110"
+    alt="Model NG-11N 90×110"
     camera-controls
     auto-rotate
-    shadow-intensity="1">
+    shadow-intensity="1"
+    exposure="0.9"
+    environment-image="neutral"
+  >
+    <!-- Małe 3D logo w prawym dolnym rogu -->
+    <div class="logo-3d-container">
+      <model-viewer
+        src="gltf-logo.glb"
+        alt="3D Logo"
+        auto-rotate
+        rotation-per-second="20deg"
+        camera-orbit="45deg 75deg 2.5m"
+        field-of-view="30deg"
+        shadow-intensity="0.8"
+        exposure="1.1"
+        environment-image="neutral"
+        disable-zoom
+        disable-pan
+        disable-tap
+      >
+      </model-viewer>
+    </div>
   </model-viewer>
+
 </body>
 </html>
