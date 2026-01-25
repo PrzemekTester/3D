@@ -17,4 +17,7 @@
  ├── model24/
  │    ├── index.html
  │    └── NG_07N_240_90_Gotisk_buet.glb
+ ├── model90/
+ │    ├── index.html
+ │    └── NG_11N_180_90_modell.glb
  └── README.md
