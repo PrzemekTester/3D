@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>NG_04N_Gotisk_buet</title>
+  <title>NG-04N_Gotisk</title>
 
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
@@ -40,8 +40,7 @@
       left: 12px;
       right: 12px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: flex-start;
       pointer-events: none;
       z-index: 10;
     }
@@ -57,6 +56,15 @@
       border-radius: 8px;
       letter-spacing: 0.5px;
       white-space: nowrap;
+    }
+
+    /* NAZWA MODELU – LEWY DOLNY RÓG */
+    .model-name-bottom {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      pointer-events: none;
+      z-index: 10;
     }
 
     /* ZNACZNIK 3D */
@@ -85,17 +93,19 @@
     <!-- TEKST GÓRNY -->
     <div class="top-bar">
       <div class="brand">Norgesgjerde AS</div>
-      <div class="model-name">NG_04N</div>
     </div>
 
     <!-- MODEL 3D -->
     <model-viewer
       src="NG_04N_240_90_Gotisk.glb"
-      alt="Model NG_04N_Gotisk"
+      alt="Model NG-04N_Gotisk"
       camera-controls
       auto-rotate
       shadow-intensity="1">
     </model-viewer>
+
+    <!-- NAZWA MODELU – LEWY DÓŁ -->
+    <div class="model-name model-name-bottom">NG_04N</div>
 
     <!-- ZNACZNIK 3D -->
     <div class="badge-3d">3D</div>
