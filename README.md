@@ -17,6 +17,12 @@
  ├── model24/
  │    ├── index.html
  │    └── NG_07N_240_90_Gotisk_buet.glb
+ ├── model31/
+ │    ├── index.html
+ │    └── NG_14N_186_139.glb
+ ├── model32/
+ │    ├── index.html
+ │    └── NG_14N_186_139.glb
  ├── model90/
  │    ├── index.html
  │    └── NG_11N_180_90_modell_2.glb
