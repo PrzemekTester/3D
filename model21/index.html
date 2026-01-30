@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <title>NG_04N_Gotisk</title>
 
+  <!-- model-viewer -->
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+  <script nomodule
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
   </script>
 
   <style>
@@ -17,7 +21,6 @@
       overflow: hidden;
     }
 
-    /* Kontener główny */
     .viewer-wrapper {
       position: relative;
       width: 100%;
@@ -32,7 +35,6 @@
       display: block;
     }
 
-    /* Wspólny styl etykiet */
     .badge {
       position: absolute;
       font-family: Arial, sans-serif;
@@ -45,21 +47,19 @@
       letter-spacing: 1px;
       pointer-events: none;
       user-select: none;
+      z-index: 10;
     }
 
-    /* Lewy górny róg */
     .badge-left {
       top: 14px;
       left: 14px;
     }
 
-    /* Prawy górny róg */
     .badge-right {
       top: 14px;
       right: 14px;
     }
 
-    /* Prawy dolny róg – 3D */
     .badge-3d {
       bottom: 14px;
       right: 14px;
@@ -70,21 +70,18 @@
 <body>
   <div class="viewer-wrapper">
 
-    <!-- Lewy górny róg -->
     <div class="badge badge-left">Norgesgjerde AS</div>
-
-    <!-- Prawy górny róg -->
-    <div class="badge badge-right">NG-04N - bred stakitt - Rett</div>
+    <div class="badge badge-right">NG-04N – bred stakitt – Rett</div>
 
     <model-viewer
       src="NG_04N_240_90_Gotisk.glb"
-      alt="Model_NG-04N_Gotisk"
+      alt="Model NG-04N Gotisk"
       camera-controls
       auto-rotate
-      shadow-intensity="1">
+      shadow-intensity="1"
+      exposure="1">
     </model-viewer>
 
-    <!-- Prawy dolny róg -->
     <div class="badge badge-3d">3D</div>
 
   </div>
