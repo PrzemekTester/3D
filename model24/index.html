@@ -40,8 +40,7 @@
       left: 12px;
       right: 12px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: flex-start;
       pointer-events: none;
       z-index: 10;
     }
@@ -57,6 +56,15 @@
       border-radius: 8px;
       letter-spacing: 0.5px;
       white-space: nowrap;
+    }
+
+    /* NAZWA MODELU – LEWY DOLNY RÓG */
+    .model-name-bottom {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      pointer-events: none;
+      z-index: 10;
     }
 
     /* ZNACZNIK 3D */
@@ -85,7 +93,6 @@
     <!-- TEKST GÓRNY -->
     <div class="top-bar">
       <div class="brand">Norgesgjerde AS</div>
-      <div class="model-name">NG_07N</div>
     </div>
 
     <!-- MODEL 3D -->
@@ -96,6 +103,9 @@
       auto-rotate
       shadow-intensity="1">
     </model-viewer>
+
+    <!-- NAZWA MODELU – LEWY DÓŁ -->
+    <div class="model-name model-name-bottom">NG_07N</div>
 
     <!-- ZNACZNIK 3D -->
     <div class="badge-3d">3D</div>
