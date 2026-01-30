@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>NG-06N_Gotisk</title>
+  <title>NG_06N_Gotisk_buet</title>
 
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
@@ -17,7 +17,6 @@
       overflow: hidden;
     }
 
-    /* Kontener główny */
     .viewer-wrapper {
       position: relative;
       width: 100%;
@@ -30,11 +29,41 @@
       height: 100%;
       background-color: #0a5c0a;
       display: block;
+      position: relative;
+      z-index: 1;
     }
 
-    /* Wspólny styl etykiet */
-    .badge {
+    /* GÓRNY OVERLAY */
+    .top-bar {
       position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .brand,
+    .model-name {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 6px 12px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    /* ZNACZNIK 3D */
+    .badge-3d {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
       font-family: Arial, sans-serif;
       font-size: 18px;
       font-weight: bold;
@@ -45,24 +74,7 @@
       letter-spacing: 1px;
       pointer-events: none;
       user-select: none;
-    }
-
-    /* Lewy górny róg */
-    .badge-left {
-      top: 14px;
-      left: 14px;
-    }
-
-    /* Prawy górny róg */
-    .badge-right {
-      top: 14px;
-      right: 14px;
-    }
-
-    /* Prawy dolny róg – 3D */
-    .badge-3d {
-      bottom: 14px;
-      right: 14px;
+      z-index: 10;
     }
   </style>
 </head>
@@ -70,22 +82,23 @@
 <body>
   <div class="viewer-wrapper">
 
-    <!-- Lewy górny róg -->
-    <div class="badge badge-left">Norgesgjerde AS</div>
+    <!-- TEKST GÓRNY -->
+    <div class="top-bar">
+      <div class="brand">Norgesgjerde AS</div>
+      <div class="model-name">NG_06N - 4-kant stakitt - Rett</div>
+    </div>
 
-    <!-- Prawy górny róg -->
-    <div class="badge badge-right">NG-06N - 4-kant stakitt - Rett</div>
-
+    <!-- MODEL 3D -->
     <model-viewer
-      src="NG_06N_240_90_Gotisk.glb"
-      alt="Model NG-06N_Gotisk"
+      src="NG_06N_240_90_Gotisk_buet.glb"
+      alt="Model NG_06N_Gotisk_buet"
       camera-controls
       auto-rotate
       shadow-intensity="1">
     </model-viewer>
 
-    <!-- Prawy dolny róg -->
-    <div class="badge badge-3d">3D</div>
+    <!-- ZNACZNIK 3D -->
+    <div class="badge-3d">3D</div>
 
   </div>
 </body>
