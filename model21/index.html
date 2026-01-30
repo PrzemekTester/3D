@@ -2,14 +2,10 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>NG_04N_Gotisk</title>
+  <title>NG_04N_Gotisk_buet</title>
 
-  <!-- model-viewer -->
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-  </script>
-  <script nomodule
-    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
   </script>
 
   <style>
@@ -33,10 +29,41 @@
       height: 100%;
       background-color: #0a5c0a;
       display: block;
+      position: relative;
+      z-index: 1;
     }
 
-    .badge {
+    /* GÓRNY OVERLAY */
+    .top-bar {
       position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .brand,
+    .model-name {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 6px 12px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    /* ZNACZNIK 3D */
+    .badge-3d {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
       font-family: Arial, sans-serif;
       font-size: 18px;
       font-weight: bold;
@@ -49,40 +76,29 @@
       user-select: none;
       z-index: 10;
     }
-
-    .badge-left {
-      top: 14px;
-      left: 14px;
-    }
-
-    .badge-right {
-      top: 14px;
-      right: 14px;
-    }
-
-    .badge-3d {
-      bottom: 14px;
-      right: 14px;
-    }
   </style>
 </head>
 
 <body>
   <div class="viewer-wrapper">
 
-    <div class="badge badge-left">Norgesgjerde AS</div>
-    <div class="badge badge-right">NG_04N</div>
+    <!-- TEKST GÓRNY -->
+    <div class="top-bar">
+      <div class="brand">Norgesgjerde AS</div>
+      <div class="model-name">NG_04N</div>
+    </div>
 
+    <!-- MODEL 3D -->
     <model-viewer
       src="NG_04N_240_90_Gotisk.glb"
-      alt="Model NG-04N Gotisk"
+      alt="Model NG_04N_Gotisk"
       camera-controls
       auto-rotate
-      shadow-intensity="1"
-      exposure="1">
+      shadow-intensity="1">
     </model-viewer>
 
-    <div class="badge badge-3d">3D</div>
+    <!-- ZNACZNIK 3D -->
+    <div class="badge-3d">3D</div>
 
   </div>
 </body>
