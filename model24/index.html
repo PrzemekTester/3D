@@ -13,26 +13,53 @@
       margin: 0;
       width: 100%;
       height: 100%;
-      background: #000;
+      background: #0a5c0a;
       overflow: hidden;
     }
 
-    /* Kontener główny */
     .viewer-wrapper {
       position: relative;
       width: 100%;
       height: 100%;
-      background: #000;
+      background: #0a5c0a;
     }
 
     model-viewer {
       width: 100%;
       height: 100%;
-      background-color: #000;
+      background-color: #0a5c0a;
       display: block;
+      position: relative;
+      z-index: 1;
     }
 
-    /* LOGO 3D – większe, ale nie zasłania modelu */
+    /* GÓRNY OVERLAY */
+    .top-bar {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .brand,
+    .model-name {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 6px 12px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    /* ZNACZNIK 3D */
     .badge-3d {
       position: absolute;
       bottom: 14px;
@@ -47,21 +74,32 @@
       letter-spacing: 1px;
       pointer-events: none;
       user-select: none;
+      z-index: 10;
     }
   </style>
 </head>
 
 <body>
   <div class="viewer-wrapper">
+
+    <!-- TEKST GÓRNY -->
+    <div class="top-bar">
+      <div class="brand">Norgesgjerde AS</div>
+      <div class="model-name">NG-07N - 4-kant stakitt - Buet</div>
+    </div>
+
+    <!-- MODEL 3D -->
     <model-viewer
       src="NG_07N_240_90_Gotisk_buet.glb"
-      alt="Model NG-07_Gotisk_buet"
+      alt="Model NG-07N_Gotisk_buet"
       camera-controls
       auto-rotate
       shadow-intensity="1">
     </model-viewer>
 
+    <!-- ZNACZNIK 3D -->
     <div class="badge-3d">3D</div>
+
   </div>
 </body>
 </html>
