@@ -13,7 +13,7 @@
       margin: 0;
       width: 100%;
       height: 100%;
-      background:  #0a5c0a;
+      background: #0a5c0a;
       overflow: hidden;
     }
 
@@ -32,11 +32,9 @@
       display: block;
     }
 
-    /* LOGO 3D – większe, ale nie zasłania modelu */
-    .badge-3d {
+    /* Wspólny styl etykiet */
+    .badge {
       position: absolute;
-      bottom: 14px;
-      right: 14px;
       font-family: Arial, sans-serif;
       font-size: 18px;
       font-weight: bold;
@@ -48,11 +46,36 @@
       pointer-events: none;
       user-select: none;
     }
+
+    /* Lewy górny róg */
+    .badge-left {
+      top: 14px;
+      left: 14px;
+    }
+
+    /* Prawy górny róg */
+    .badge-right {
+      top: 14px;
+      right: 14px;
+    }
+
+    /* Prawy dolny róg – 3D */
+    .badge-3d {
+      bottom: 14px;
+      right: 14px;
+    }
   </style>
 </head>
 
 <body>
   <div class="viewer-wrapper">
+
+    <!-- Lewy górny róg -->
+    <div class="badge badge-left">Norgesgjerde AS</div>
+
+    <!-- Prawy górny róg -->
+    <div class="badge badge-right">NG-06N - 4-kant stakitt - Rett</div>
+
     <model-viewer
       src="NG_04N_240_90_Gotisk.glb"
       alt="Model NG-04N_Gotisk"
@@ -61,7 +84,9 @@
       shadow-intensity="1">
     </model-viewer>
 
-    <div class="badge-3d">3D</div>
+    <!-- Prawy dolny róg -->
+    <div class="badge badge-3d">3D</div>
+
   </div>
 </body>
 </html>
