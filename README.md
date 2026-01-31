@@ -52,7 +52,7 @@
  │    └── NG-11N_180_90_ALU.glb
  ├── model34/
  │    ├── index.html
- │    └── NG_15D_186_180_90.glb
+ │    └── NG-11N_180_90_SORT.glb
  ├── model41/
  │    ├── index.html
  │    └── NG_14N_186_139.glb
