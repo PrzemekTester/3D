@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
   <title>NG_16N_186_180</title>
@@ -84,6 +84,20 @@
       user-select: none;
       z-index: 10;
     }
+
+    /* === MOBILE: ZMNIEJSZENIE TEKSTU O 50% === */
+    @media (max-width: 768px) {
+      .brand,
+      .model-name {
+        font-size: 8px; /* 16px → 50% */
+      }
+      
+     .badge-3d {
+        font-size: 9px; /* 18px → 50% */
+        padding: 3px 7px; /* 50% paddingu dla spójności */
+        border-radius: 6px; 
+      }
+    }
   </style>
 </head>
 
@@ -105,7 +119,7 @@
     </model-viewer>
 
     <!-- NAZWA MODELU – LEWY DÓŁ -->
-    <div class="model-name model-name-bottom">NG_16N_186_180</div>
+    <div class="model-name model-name-bottom">NG-16N_186_180</div>
 
     <!-- ZNACZNIK 3D -->
     <div class="badge-3d">3D</div>
