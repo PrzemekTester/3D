@@ -43,13 +43,13 @@
  │    └── NG_07N_240_90_Gotisk_buet.glb
  ├── model31/
  │    ├── index.html
- │    └── NG_14N_186_139.glb
+ │    └── NG-11N_180_90.glb
  ├── model32/
  │    ├── index.html
- │    └── NG_15N_186_180.glb
+ │    └── NG-11N_180_90_GRA.glb
  ├── model33/
  │    ├── index.html
- │    └── NG_15N_186_180_GRA.glb
+ │    └── NG-11N_180_90_ALU.glb
  ├── model34/
  │    ├── index.html
  │    └── NG_15D_186_180_90.glb
