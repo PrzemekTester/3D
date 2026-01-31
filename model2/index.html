@@ -2,7 +2,7 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8">
-  <title>NG-11N_(100)_110_ALU</title>
+  <title>NG-11N_(100)_100_ALU</title>
 
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
@@ -13,7 +13,7 @@
       margin: 0;
       width: 100%;
       height: 100%;
-      background: #0a5c0a;
+      background: #0a5c0a; /* TŁO BEZ ZMIAN */
       overflow: hidden;
     }
 
@@ -21,26 +21,24 @@
       position: relative;
       width: 100%;
       height: 100%;
-      background: #0a5c0a;
+      background: #0a5c0a; /* TŁO BEZ ZMIAN */
     }
 
     model-viewer {
       width: 100%;
       height: 100%;
-      background-color: #0a5c0a;
+      background-color: #0a5c0a; /* TŁO BEZ ZMIAN */
       display: block;
       position: relative;
       z-index: 1;
     }
 
-    /* GÓRNY OVERLAY */
     .top-bar {
       position: absolute;
       top: 12px;
       left: 12px;
       right: 12px;
       display: flex;
-      justify-content: flex-start;
       pointer-events: none;
       z-index: 10;
     }
@@ -58,7 +56,6 @@
       white-space: nowrap;
     }
 
-    /* NAZWA MODELU – LEWY DOLNY RÓG */
     .model-name-bottom {
       position: absolute;
       bottom: 14px;
@@ -67,7 +64,6 @@
       z-index: 10;
     }
 
-    /* ZNACZNIK 3D */
     .badge-3d {
       position: absolute;
       bottom: 14px;
@@ -85,17 +81,16 @@
       z-index: 10;
     }
 
-    /* === MOBILE: ZMNIEJSZENIE TEKSTU O 50% === */
     @media (max-width: 768px) {
       .brand,
       .model-name {
-        font-size: 8px; /* 16px → 50% */
+        font-size: 8px;
       }
-      
-     .badge-3d {
-        font-size: 9px; /* 18px → 50% */
-        padding: 3px 7px; /* 50% paddingu dla spójności */
-        border-radius: 6px; 
+
+      .badge-3d {
+        font-size: 9px;
+        padding: 3px 7px;
+        border-radius: 6px;
       }
     }
   </style>
@@ -104,24 +99,25 @@
 <body>
   <div class="viewer-wrapper">
 
-    <!-- TEKST GÓRNY -->
     <div class="top-bar">
       <div class="brand">Norgesgjerde AS</div>
     </div>
 
-    <!-- MODEL 3D -->
+    <!-- MODEL 3D – CZARNY JAK W glTF.report -->
     <model-viewer
-      src="NG-11N_(100)_110_ALU.glb"
-      alt="Model NG-11N_100_110"
+      src="NG-11N_(100)_100_ALU.glb"
+      alt="Model NG-11N_(100)_100_ALU"
       camera-controls
       auto-rotate
-      shadow-intensity="1">
+      exposure="0.60"
+      environment-image=""
+      skybox-image=""
+      tone-mapping="linear"
+      shadow-intensity="0.6">
     </model-viewer>
 
-    <!-- NAZWA MODELU – LEWY DÓŁ -->
-    <div class="model-name model-name-bottom">NG-11N_100_110_ALU</div>
+    <div class="model-name model-name-bottom">NG-11N_(100)_100_ALU</div>
 
-    <!-- ZNACZNIK 3D -->
     <div class="badge-3d">3D</div>
 
   </div>
