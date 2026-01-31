@@ -84,6 +84,20 @@
       user-select: none;
       z-index: 10;
     }
+
+    /* === MOBILE: ZMNIEJSZENIE TEKSTU O 50% === */
+    @media (max-width: 768px) {
+      .brand,
+      .model-name {
+        font-size: 8px; /* 16px → 50% */
+      }
+      
+     .badge-3d {
+        font-size: 9px; /* 18px → 50% */
+        padding: 3px 7px; /* 50% paddingu dla spójności */
+        border-radius: 6px; 
+      }
+    }
   </style>
 </head>
 
