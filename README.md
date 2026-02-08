@@ -1,7 +1,7 @@
 3D
  ├── model1/
  │    ├── index.html
- │    └── NG-11N_(90)_110_H.glb
+ │    └── NG-11N_(90)_110_V_v2.glb
  ├── model2/
  │    ├── index.html
  │    └── NG-11N_(100)_110_ALU.glb
