@@ -4,7 +4,7 @@
  │    └── NG-11N_(90)_110_V_v2.glb
  ├── model2/
  │    ├── index.html
- │    └── NG-11N_(100)_110_ALU.glb
+ │    └── NG-11N_(100)_110_ALU_v2.glb
  ├── model3/
  │    ├── index.html
  │    └── NG-04N_(90)_110_V.glb    
