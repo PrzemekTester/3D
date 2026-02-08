@@ -13,7 +13,7 @@
  │    └── NG-04N_(130)_110_V.glb    
  ├── model4/
  │    ├── index.html
- │    └── NG-06N_(90)_110_V.glb     
+ │    └── NG-06N_(90)_110_V_v2.glb     
  ├── model4A/
  │    ├── index.html
  │    └── NG-06N_(130)_110_V.glb   
