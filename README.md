@@ -76,5 +76,5 @@
  │    └── NG_17N_186_180.glb
  ├── model90/
  │    ├── index.html
- │    └── NG_11N_180_90_modell.glb
+ │    └── NG_11N_180_90_modell_.glb
  └── README.md
