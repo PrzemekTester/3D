@@ -80,4 +80,7 @@
  ├── model91/
  │    ├── index.html
  │    └── Handlist.glb
+ ├── model92/
+ │    ├── index.html
+ │    └── Veggfester.glb
  └── README.md
