@@ -79,7 +79,7 @@
  │    └── NG_17N_186_180.glb
  ├── model80/
  │    ├── index.html
- │    └── NG_PP01.glb
+ │    └── NG_PP01_2.glb
  ├── model81/
  │    ├── index.html
  │    └── NG_PP02.glb
