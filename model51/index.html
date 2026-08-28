@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>NG-11G_180_100_SORT</title>
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #0a5c0a; /* TŁO BEZ ZMIAN */
+      overflow: hidden;
+    }
+
+    .viewer-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #0a5c0a; /* TŁO BEZ ZMIAN */
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      background-color: #0a5c0a; /* TŁO BEZ ZMIAN */
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .top-bar {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .brand,
+    .model-name {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 6px 12px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .model-name-bottom {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .badge-3d {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 6px 14px;
+      border-radius: 10px;
+      letter-spacing: 1px;
+      pointer-events: none;
+      user-select: none;
+      z-index: 10;
+    }
+
+    @media (max-width: 768px) {
+      .brand,
+      .model-name {
+        font-size: 8px;
+      }
+
+      .badge-3d {
+        font-size: 9px;
+        padding: 3px 7px;
+        border-radius: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="viewer-wrapper">
+
+    <div class="top-bar">
+      <div class="brand">Norgesgjerde AS</div>
+    </div>
+
+    <!-- MODEL 3D – CZARNY JAK W glTF.report -->
+    <model-viewer
+      src="NG-11G_180_100_SORT.glb"
+      alt="Model NG-11G_180_100_SORT"
+      camera-controls
+      auto-rotate
+      exposure="0.25"
+      environment-image=""
+      skybox-image=""
+      tone-mapping="linear"
+      shadow-intensity="0.6">
+    </model-viewer>
+
+    <div class="model-name model-name-bottom">NG-11G_180_100_SORT</div>
+
+    <div class="badge-3d">3D</div>
+
+  </div>
+</body>
+</html>
